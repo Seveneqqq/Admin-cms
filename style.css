@@ -103,36 +103,72 @@ ul{
     text-align: center;
     text-shadow: 0px 0px 4px white;
 }
-.progress-bar>p{
+.progress-bar1,.progress-bar2,.progress-bar3>p{
     display: block;
     text-wrap:balance;
     text-align: center;
-    text-shadow: 0px 0px 10px white;
-    
-    
+    padding-top: 50px;
+    font-size: 32px;
+    text-shadow: 0px 0px 5px white;
 }
+
 .content-divs:hover{
     background-color: rgba(24, 26, 30, 0.7);;
 }
-.content-divs>.progress-bar{
+.progress-bar1{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
     width: 8vw;
     height: 8vw;
     border-radius: 50%;
+    box-shadow: 0px 0px 15px -1px rgb(229, 64, 86); 
     background: 
       radial-gradient(closest-side, #25252c 79%, transparent 80% 100%),
       conic-gradient(rgb(184, 25, 46) calc(var(--progress-value) * 1%), pink 0);  
-      animation: progress 0.8s 1 forwards;  
+      animation: progress1 0.8s 1 forwards;  
+  }
+  .progress-bar2{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -1px rgb(229, 64, 86);  
+    background: 
+      radial-gradient(closest-side, #25252c 79%, transparent 80% 100%),
+      conic-gradient(rgb(184, 25, 46) calc(var(--progress-value) * 1%), pink 0); 
+      animation: progress2 0.8s 1 forwards;  
+  }
+  .progress-bar3{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px -1px rgb(229, 64, 86);   
+    background: 
+      radial-gradient(closest-side, #25252c 79%, transparent 80% 100%),
+      conic-gradient(rgb(184, 25, 46) calc(var(--progress-value) * 1%), pink 0);  
+      animation: progress3 0.8s 1 forwards;  
   }
 
 
 
 
-  .progress-bar::before {
+  .progress-bar1::before {
     counter-reset: percentage var(--progress-value);
-    animation: progress 0.1s 1 forwards;
+    animation: progress1 0.1s 1 forwards;
+  }
+  .progress-bar2::before {
+    counter-reset: percentage var(--progress-value);
+    animation: progress2 0.1s 1 forwards;
+  }
+  .progress-bar3::before {
+    counter-reset: percentage var(--progress-value);
+    animation: progress3 0.1s 1 forwards;
   }
 
   @property --progress-value {
@@ -141,6 +177,12 @@ ul{
     inherits: false;
   }
   
-  @keyframes progress {
-   to { --progress-value: 61; }
+  @keyframes progress1 {
+   to { --progress-value: 60; }
   }
+  @keyframes progress2 {
+    to { --progress-value: 35; }
+   }
+   @keyframes progress3 {
+    to { --progress-value: 92; }
+   }
